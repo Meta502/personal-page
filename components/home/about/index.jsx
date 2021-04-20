@@ -4,11 +4,11 @@ const cvLink = 'https://drive.google.com/file/d/1BBS2RWfitQq6VOhwzIbKCMW4IupplB3
 const emailLink = 'mailto:adrian.ardizza@gmail.com';
 
 const About = () => (
-  <div className="flex flex-col md:flex-row justify-center my-8">
+  <div className="flex flex-col md:flex-row items-center justify-center my-8">
     <div className="max-w-xs w-72 md:mr-10">
       <img className="rounded-lg" src="/images/me.jpg" />
     </div>
-    <div className="m-8 md:m-0 md:w-1/2 self-center">
+    <div className="m-8 md:m-0 md:w-1/2">
       <h1 className="text-3xl font-semibold mb-1 select-none">
         About Me.
       </h1>

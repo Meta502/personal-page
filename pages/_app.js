@@ -12,7 +12,7 @@ function MyApp({Component, pageProps}) {
       <motion.div
         initial={{opacity: 0}}
         animate={{opacity: 1}}
-        transition={{delay: 1.2}}
+        transition={{delay: 1.25}}
       >
         <Component {...pageProps} />
       </motion.div>

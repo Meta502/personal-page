@@ -46,14 +46,14 @@ const frontendEntries = [
 
 const Skills = () => (
   <div className="flex flex-col items-center justify-center my-16 py-8 select-none">
-    <h1 className="text-4xl font-semibold">
+    <h1 className="text-2xl md:text-4xl font-semibold">
       Skills and Technologies.
     </h1>
     <div className="flex flex-col items-center justify-center mt-4">
       <p className="text-lg">Programming Languages</p>
       <div className="flex mt-4">
         { langEntries.map((item) => (
-          <img className="w-11 mx-4" src={item.src} key={item.src} />
+          <img className="w-8 md:w-11 mx-4" src={item.src} key={item.src} />
         ))}
       </div>
     </div>
@@ -62,7 +62,7 @@ const Skills = () => (
       <p className="text-lg">Database</p>
       <div className="flex mt-4">
         { databaseEntries.map((item) => (
-          <img className="w-11 mx-4" src={item.src} key={item.src} />
+          <img className="w-8 md:w-11 mx-4" src={item.src} key={item.src} />
         ))}
       </div>
     </div>
@@ -71,7 +71,7 @@ const Skills = () => (
       <p className="text-lg">Frontend</p>
       <div className="flex mt-4">
         { frontendEntries.map((item) => (
-          <img className="w-11 mx-4" src={item.src} key={item.src} />
+          <img className="w-8 md:w-11 mx-4" src={item.src} key={item.src} />
         ))}
       </div>
     </div>
