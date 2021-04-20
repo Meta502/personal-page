@@ -43,7 +43,14 @@ const Hero = () => {
       className="flex flex-col h-screen-1/2 w-full items-center justify-center
                  bg-hero bg-cover"
     >
-      <div className="flex">
+      <motion.div
+        className="flex"
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        transition={{
+          delay: 0.4,
+          duration: 0.8,
+        }}>
         <div className="bg-blue-400 mr-2.5 w-0.5" />
         <div className="select-none">
           <h1 className="text-4xl md:text-5xl text-white">
@@ -70,7 +77,7 @@ const Hero = () => {
             }
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

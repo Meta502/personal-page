@@ -14,6 +14,11 @@ module.exports = {
       height: {
         'screen-1/2': '50vh',
       },
+      colors: {
+        gray: {
+          dark: '#121212',
+        },
+      },
     },
   },
   variants: {

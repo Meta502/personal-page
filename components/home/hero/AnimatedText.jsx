@@ -12,7 +12,7 @@ const sentence = {
     opacity: 1,
     transition: {
       delay: 0.5,
-      staggerChildren: 0.035,
+      staggerChildren: 0.025,
     },
   },
 };
