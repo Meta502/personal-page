@@ -23,5 +23,6 @@ module.exports = {
     'require-jsdoc': 'off',
     'react/react-in-jsx-scope': 'off',
     'linebreak-style': 'off',
+    'max-len': [2, {'code': 100, 'tabWidth': 4, 'ignoreUrls': true}],
   },
 };

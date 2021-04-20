@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Item from './MenuItem';
 
 const Navbar = () => (
-  <div className="fixed w-full py-4 px-6">
+  <div className="fixed w-full py-4 px-8">
     <div className="flex justify-between items-center mx-auto text-white">
       <Link href="/">
         <h1 className="text-xl font-semibold cursor-pointer select-none">
