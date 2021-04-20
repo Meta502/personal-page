@@ -53,7 +53,7 @@ const Skills = () => (
       <p className="text-lg">Programming Languages</p>
       <div className="flex mt-4">
         { langEntries.map((item) => (
-          <img className="w-8 md:w-11 mx-4" src={item.src} key={item.src} />
+          <img className="w-8 md:w-11 mx-4 md:mx-10" src={item.src} key={item.src} />
         ))}
       </div>
     </div>
@@ -62,7 +62,7 @@ const Skills = () => (
       <p className="text-lg">Database</p>
       <div className="flex mt-4">
         { databaseEntries.map((item) => (
-          <img className="w-8 md:w-11 mx-4" src={item.src} key={item.src} />
+          <img className="w-8 md:w-11 mx-4 md:mx-6" src={item.src} key={item.src} />
         ))}
       </div>
     </div>
@@ -71,7 +71,7 @@ const Skills = () => (
       <p className="text-lg">Frontend</p>
       <div className="flex mt-4">
         { frontendEntries.map((item) => (
-          <img className="w-8 md:w-11 mx-4" src={item.src} key={item.src} />
+          <img className="w-8 md:w-11 mx-4 md:mx-16" src={item.src} key={item.src} />
         ))}
       </div>
     </div>
