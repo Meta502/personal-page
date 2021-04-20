@@ -13,9 +13,6 @@ const Navbar = () => (
         <Item href="/">
           <a className="mr-5">home</a>
         </Item>
-        <Item href="/blog">
-          <a>blog</a>
-        </Item>
       </div>
     </div>
   </div>
