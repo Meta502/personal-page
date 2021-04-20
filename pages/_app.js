@@ -1,7 +1,19 @@
-import '../styles/globals.css'
+import Navbar from '../components/base/navbar';
+import '../styles/globals.css';
+import propTypes from 'prop-types';
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({Component, pageProps}) {
+  return (
+    <>
+      <Navbar />
+      <Component {...pageProps} />
+    </>
+  );
 }
 
-export default MyApp
+MyApp.propTypes = {
+  Component: propTypes.func.isRequired,
+  pageProps: propTypes.object.isRequired,
+};
+
+export default MyApp;
