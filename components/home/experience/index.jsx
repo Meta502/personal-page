@@ -12,7 +12,6 @@ const entries = [
       '/icons/ts-node.svg',
       '/icons/react.svg',
       '/icons/next-dot-js.svg',
-      '/icons/graphql.svg',
       '/icons/hasura.svg',
     ],
     activities: [
@@ -48,7 +47,7 @@ const entries = [
     activities: [
       'Implemented backend logic for the Pemira IKM UI E-Voting website',
       'Involved in designing and managing the Pemira database schema',
-      'Deployed and maintained the project to DSTI-hosted servers',
+      'Deployed and maintained the project on DSTI UI-hosted servers',
     ],
   },
 ];
@@ -57,14 +56,21 @@ const Experience = () => {
   const [ref, inView] = useInView();
 
   return <div className="flex flex-col justify-center items-center mt-6 mb-12 w-full select-none">
-    <div className="mb-8">
+    <div className="mb-10">
       <div
         className="inline-flex flex-col"
         ref={ref}
       >
         <h1
-          className={`inline-flex items-center flex-col md:flex-row transition-all duration-500
-                    ${!inView && 'opacity-0'}`}
+          className={`
+            inline-flex
+            items-center
+            flex-col 
+            md:flex-row 
+            transition-all 
+            duration-500
+            ${!inView && 'opacity-0'}
+          `}
         >
           <span className="text-2xl md:text-3xl font-semibold">Experience</span>
           <span className="hidden md:block text-2xl md:text-3xl text-blue-500">&nbsp;|&nbsp;</span>
@@ -74,7 +80,7 @@ const Experience = () => {
       </div>
     </div>
     <motion.div
-      className={`transition-all grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10`}
+      className={`transition-all grid grid-cols-1 lg:grid-cols-2 gap-x-6 gap-y-10`}
       ref={ref}
     >
       {entries.map((item) => (

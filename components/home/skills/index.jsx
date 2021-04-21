@@ -9,8 +9,15 @@ const Skills = () => {
     <div className="flex flex-col items-center justify-center mt-10 mb-16 py-8 select-none">
       <div ref={ref}>
         <h1
-          className={`inline-flex items-center flex-col md:flex-row transition-all duration-500
-                      ${!inView && 'opacity-0'}`}
+          className={`
+            inline-flex
+            items-center
+            flex-col 
+            md:flex-row 
+            transition-all 
+            duration-500
+            ${!inView && 'opacity-0'}
+          `}
         >
           <span className="text-2xl md:text-3xl font-semibold">Skills {'\&'} Technologies</span>
           <span className="hidden md:block text-2xl md:text-3xl text-blue-500">&nbsp;|&nbsp;</span>
@@ -23,8 +30,17 @@ const Skills = () => {
         ref={ref}
       >
         <div
-          className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-16 mt-4 transition-all
-                      duration-1000 ${!inView && 'opacity-0'}`}
+          className={`
+            grid
+            grid-cols-2
+            sm:grid-cols-3
+            md:grid-cols-5
+            gap-16
+            mt-4
+            transition-all
+            duration-1000
+            ${!inView && 'opacity-0'}
+          `}
         >
           { skillEntries.map((item) => (
             <div className="flex flex-col justify-center items-center" key={item.name}>

@@ -29,15 +29,22 @@ const Navbar = () => {
 
   return (
     <motion.div
-      className={`transition-all fixed z-50 w-full py-4 px-8 
-                ${scrolled > 50 && 'bg-gray-dark'}`}
+      className={`
+        transition-all
+        fixed
+        z-50
+        w-full
+        py-4
+        px-8
+        ${scrolled > 50 && 'bg-gray-dark'}
+      `}
       initial="hidden"
       animate="show"
       variants={navAnimation}
     >
       <div className="flex justify-between items-center mx-auto text-white">
         <Link href="/">
-          <h1 className="text-xl font-semibold cursor-pointer select-none">
+          <h1 className="text-lg font-semibold cursor-pointer select-none">
           adrian.ardizza
           </h1>
         </Link>
