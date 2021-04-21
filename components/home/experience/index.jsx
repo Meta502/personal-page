@@ -55,7 +55,7 @@ const entries = [
 const Experience = () => {
   const [ref, inView] = useInView();
 
-  return <div className="flex flex-col justify-center items-center mt-6 mb-12 w-full select-none">
+  return <div className="flex flex-col justify-center items-center mt-6 mb-16 w-full select-none">
     <div className="mb-10">
       <div
         className="inline-flex flex-col"

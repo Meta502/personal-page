@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="flex justify-between items-center mx-auto text-white">
         <Link href="/">
           <h1 className="text-lg font-semibold cursor-pointer select-none">
-          adrian.ardizza
+            adrian.ardizza
           </h1>
         </Link>
         <div className="flex font-light text-md">

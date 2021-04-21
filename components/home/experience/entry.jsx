@@ -8,8 +8,13 @@ const Entry = ({
       <div className="mr-6 md:w-3/4">
         <h1 className="text-xl font-medium">{entry.position}</h1>
         <p>{entry.organization} | {entry.period}</p>
+        <div className="flex lg:hidden md:w-1/4 select-none pointer-events-none my-1">
+          { entry.technologies.map((item) =>
+            <img className="w-5 mr-3.5 last:mr-0" key={item} src={item} />,
+          )}
+        </div>
       </div>
-      <div className="hidden md:flex md:w-1/4 justify-end select-none pointer-events-none">
+      <div className="hidden lg:flex md:w-1/4 select-none justify-end pointer-events-none my-1">
         { entry.technologies.map((item) =>
           <img className="w-6 mr-3.5 last:mr-0" key={item} src={item} />,
         )}
