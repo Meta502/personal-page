@@ -8,7 +8,7 @@ const About = () => (
     <div className="max-w-xs w-72 md:mr-10">
       <img className="rounded-lg" src="/images/me.jpg" />
     </div>
-    <div className="m-8 md:m-0 md:w-1/2">
+    <div className="m-8 md:m-0 max-w-3/4">
       <h1 className="text-3xl font-semibold mb-1 select-none">
         About Me.
       </h1>

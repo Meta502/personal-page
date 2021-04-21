@@ -1,40 +1,17 @@
 import {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
+import {heroWords, heroSocial} from '../config';
 
 import AnimatedText from './AnimatedText';
-
-const words = [
-  'backend developer',
-  'frontend developer',
-  'computer science student',
-];
-
-const socialMedia = [
-  {
-    src: '/icons/github.svg',
-    href: 'https://github.com/Meta1807',
-  },
-  {
-    src: '/icons/gitlab.svg',
-    href: 'https://gitlab.com/metagenesis/',
-  },
-  {
-    src: '/icons/instagram.svg',
-    href: 'https://www.instagram.com/adrianardizza/',
-  },
-  {
-    src: '/icons/twitter.svg',
-    href: 'https://twitter.com/adrianardizza',
-  },
-];
 
 const Hero = () => {
   const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
-      setWordIndex((wordIndex + 1) % words.length);
-    }, 4500);
+    const timer = setInterval(() => {
+      setWordIndex((wordIndex + 1) % heroWords.length);
+    }, 4000);
+    return () => clearInterval(timer);
   });
 
   return (
@@ -58,11 +35,11 @@ const Hero = () => {
             <span>adrian ardizza</span>
           </h1>
           <h1 className="text-xl md:text-2xl text-white">
-            <AnimatedText words={words} index={wordIndex} />
+            <AnimatedText words={heroWords} index={wordIndex} />
           </h1>
           <div className="flex mt-2">
             {
-              socialMedia.map((item) => {
+              heroSocial.map((item) => {
                 return (
                   <motion.a
                     href={item.href}
