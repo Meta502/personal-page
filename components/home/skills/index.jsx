@@ -2,10 +2,10 @@ import {langEntries, databaseEntries, frontendEntries} from '../config';
 
 const Skills = () => (
   <div className="flex flex-col items-center justify-center my-16 py-8 select-none">
-    <h1 className="inline-flex items-center">
+    <h1 className="inline-flex items-center flex-col md:flex-row">
       <span className="text-2xl md:text-3xl font-semibold">Skills {'\&'} Technologies</span>
-      <span className="text-2xl md:text-3xl">&nbsp;|&nbsp;</span>
-      what i use to develop
+      <span className="hidden md:block text-2xl md:text-3xl">&nbsp;|&nbsp;</span>
+      <span>what i use to develop</span>
     </h1>
 
     <div className="flex flex-col items-center justify-center mt-4">

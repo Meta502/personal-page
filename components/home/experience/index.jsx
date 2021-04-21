@@ -46,9 +46,11 @@ const Experience = () => (
         {/* <div className="h-0.5 bg-blue-400 mt-2" /> */}
       </div>
     </div>
-    <div className="flex flex-wrap justify-between">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {entries.map((item) => (
-        <Entry key={item.id} entry={item} />
+        <>
+          <Entry key={item.id} entry={item} />
+        </>
       ))}
     </div>
   </div>
