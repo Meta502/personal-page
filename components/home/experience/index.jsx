@@ -15,7 +15,7 @@ const entries = [
       '/icons/graphql.svg',
     ],
     activities: [
-      'Currently involved as a staff member for COMPFEST\'s IT Dev division',
+      'Currently involved as a staff member for COMPFEST 13\'s IT Dev division',
     ],
   },
   {

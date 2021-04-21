@@ -16,7 +16,7 @@ const Entry = ({
       </div>
     </div>
     <p>
-      <ul className="list-disc list-inside">
+      <ul className="list-disc list-outside ml-4">
         {entry.activities.map((item, index) => <li key={index}>{item}</li>)}
       </ul>
     </p>

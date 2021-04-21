@@ -5,7 +5,7 @@ const emailLink = 'mailto:adrian.ardizza@gmail.com';
 
 const About = () => (
   <div className="flex flex-col md:flex-row items-center justify-center my-8 select-none">
-    <div className="max-w-xs w-72 md:mr-10">
+    <div className="max-w-xs w-full md:mr-10">
       <img className="rounded-lg" src="/images/me.jpg" />
     </div>
     <div className="m-8 md:m-0 max-w-3/4">
