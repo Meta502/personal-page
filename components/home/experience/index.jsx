@@ -1,3 +1,5 @@
+import {useInView} from 'react-intersection-observer';
+import {motion} from 'framer-motion';
 import Entry from './entry';
 
 const entries = [
@@ -34,11 +36,19 @@ const entries = [
   },
 ];
 
-const Experience = () => (
-  <div className="flex flex-col justify-center items-center mt-6 mb-12 w-full select-none">
+const Experience = () => {
+  const [ref, inView] = useInView();
+
+  return <div className="flex flex-col justify-center items-center mt-6 mb-12 w-full select-none">
     <div className="mb-8">
-      <div className="inline-flex flex-col">
-        <h1 className="inline-flex items-center flex-col md:flex-row">
+      <div
+        className="inline-flex flex-col"
+        ref={ref}
+      >
+        <h1
+          className={`inline-flex items-center flex-col md:flex-row transition-all duration-500
+                    ${!inView && 'opacity-0'}`}
+        >
           <span className="text-2xl md:text-3xl font-semibold">Experience</span>
           <span className="hidden md:block text-2xl md:text-3xl text-blue-500">&nbsp;|&nbsp;</span>
           <span>organizations i have contributed to</span>
@@ -46,14 +56,20 @@ const Experience = () => (
         {/* <div className="h-0.5 bg-blue-400 mt-2" /> */}
       </div>
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <motion.div
+      className={`transition-all grid grid-cols-1 md:grid-cols-2 gap-6`}
+      ref={ref}
+    >
       {entries.map((item) => (
-        <>
-          <Entry key={item.id} entry={item} />
-        </>
+        <div
+          className={`transition-all duration-1000 ${!inView && 'opacity-0'}`}
+          key={item.id}
+        >
+          <Entry entry={item} />
+        </div>
       ))}
-    </div>
-  </div>
-);
+    </motion.div>
+  </div>;
+};
 
 export default Experience;
