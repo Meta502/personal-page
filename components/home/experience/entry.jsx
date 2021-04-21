@@ -9,7 +9,7 @@ const Entry = ({
         <h1 className="text-xl font-medium">{entry.position}</h1>
         <p>{entry.organization} | {entry.period}</p>
       </div>
-      <div className="hidden md:flex md:w-1/4 justify-center select-none pointer-events-none">
+      <div className="hidden md:flex md:w-1/4 justify-end select-none pointer-events-none">
         { entry.technologies.map((item) =>
           <img className="w-6 mr-3.5 last:mr-0" key={item} src={item} />,
         )}

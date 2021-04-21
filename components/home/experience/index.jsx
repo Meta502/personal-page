@@ -5,6 +5,21 @@ import Entry from './entry';
 const entries = [
   {
     id: 'ENTRY-1',
+    position: 'Software Engineering',
+    organization: 'COMPFEST 13',
+    period: 'Mar 2021 - Present',
+    technologies: [
+      '/icons/ts-node.svg',
+      '/icons/react.svg',
+      '/icons/next-dot-js.svg',
+      '/icons/graphql.svg',
+    ],
+    activities: [
+      'Currently involved as a staff member for COMPFEST\'s IT Dev division',
+    ],
+  },
+  {
+    id: 'ENTRY-2',
     position: 'Web Developer',
     organization: 'EDUCARE 2021',
     period: 'Nov 2020 - Mar 2021',
@@ -19,7 +34,7 @@ const entries = [
     ],
   },
   {
-    id: 'ENTRY-2',
+    id: 'ENTRY-3',
     position: 'Backend Engineer',
     organization: 'Pemira IKM UI E-Voting',
     period: 'Mar 2020 - Dec 2020',
