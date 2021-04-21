@@ -13,6 +13,7 @@ const entries = [
       '/icons/react.svg',
       '/icons/next-dot-js.svg',
       '/icons/graphql.svg',
+      '/icons/hasura.svg',
     ],
     activities: [
       'Currently involved as a staff member for COMPFEST 13\'s IT Dev division',
@@ -73,7 +74,7 @@ const Experience = () => {
       </div>
     </div>
     <motion.div
-      className={`transition-all grid grid-cols-1 md:grid-cols-2 gap-6`}
+      className={`transition-all grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-10`}
       ref={ref}
     >
       {entries.map((item) => (

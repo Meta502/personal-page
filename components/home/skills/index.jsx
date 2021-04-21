@@ -1,6 +1,8 @@
 import {useInView} from 'react-intersection-observer';
 import {langEntries, databaseEntries, frontendEntries} from '../config';
 
+const skillEntries = [...langEntries, ...databaseEntries, ...frontendEntries];
+
 const Skills = () => {
   const [ref, inView] = useInView();
   return (
@@ -21,16 +23,14 @@ const Skills = () => {
         ref={ref}
       >
         <div
-          className={`flex flex-wrap justify-center mt-4 transition-all duration-1000
-                      ${!inView && 'opacity-0'}`}>
-          { langEntries.map((item) => (
-            <img className="w-8 md:w-11 mx-4 md:mx-8 mt-5" src={item.src} key={item.src} />
-          ))}
-          { databaseEntries.map((item) => (
-            <img className="w-8 md:w-11 mx-4 md:mx-8 mt-5" src={item.src} key={item.src} />
-          ))}
-          { frontendEntries.map((item) => (
-            <img className="w-8 md:w-11 mx-4 md:mx-8 mt-5" src={item.src} key={item.src} />
+          className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-16 mt-4 transition-all
+                      duration-1000 ${!inView && 'opacity-0'}`}
+        >
+          { skillEntries.map((item) => (
+            <div className="flex flex-col justify-center items-center" key={item.name}>
+              <img className="w-12 md:w-16 mx-4 md:mx-8 mt-5 mb-2" src={item.src} />
+              <p>{item.name}</p>
+            </div>
           ))}
         </div>
       </div>
