@@ -1,28 +1,15 @@
 import {useInView} from 'react-intersection-observer';
 import {langEntries, databaseEntries, frontendEntries} from '../config';
+import Title from '@components/base/text/title';
 
 const skillEntries = [...langEntries, ...databaseEntries, ...frontendEntries];
 
 const Skills = () => {
-  const [ref, inView] = useInView();
+  const [ref] = useInView();
   return (
     <div className="flex flex-col items-center justify-center mt-10 mb-16 py-8 select-none">
       <div ref={ref}>
-        <h1
-          className={`
-            inline-flex
-            items-center
-            flex-col 
-            md:flex-row 
-            transition-all 
-            duration-500
-            ${!inView && 'opacity-0'}
-          `}
-        >
-          <span className="text-2xl md:text-3xl font-semibold">Skills {'\&'} Technologies</span>
-          <span className="hidden md:block text-2xl md:text-3xl text-blue-500">&nbsp;|&nbsp;</span>
-          <span>what i use to develop</span>
-        </h1>
+        <Title title='skills & technologies' subtitle='what i use to develop' inView={true} />
       </div>
 
       <div
@@ -39,7 +26,6 @@ const Skills = () => {
             mt-4
             transition-all
             duration-1000
-            ${!inView && 'opacity-0'}
           `}
         >
           { skillEntries.map((item) => (

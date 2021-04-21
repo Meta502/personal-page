@@ -1,24 +1,21 @@
 import {motion} from 'framer-motion';
+import Title from '@components/base/text/title';
 
 const cvLink = 'https://drive.google.com/file/d/1BBS2RWfitQq6VOhwzIbKCMW4IupplB3q/view?usp=sharing';
 const emailLink = 'mailto:adrian.ardizza@gmail.com';
 
 const About = () => (
   <div className="flex flex-col md:flex-row items-center justify-center my-8 select-none">
-    <div className="max-w-xs w-72 md:mr-10">
+    <div className="max-w-xs w-64 md:mr-10">
       <img className="rounded-lg" src="/images/me.jpg" />
     </div>
-    <div className="m-8 md:m-0 max-w-62.5">
-      <h1 className="text-3xl font-semibold mb-1">
-        About Me.
-      </h1>
+    <div className="m-8 md:m-0 sm:max-w-62.5">
+      <Title title='about me' subtitle='full-stack web developer' className="mb-1" />
       <p className="font-light text-justify">
         My name is Adrian Ardizza, an aspiring web developer and computer science student
-        currently studying at Fasilkom UI (CHRONOS 2020).
-        I have 4 years of experience in web development, with extensive knowledge of
-        both frontend (React.js, Vue.js) and backend (Express.js, relational databases,
-        document-based databases, Linux System Administration) technologies and
-        how to use that knowledge in creating robust and functional applications.
+        currently studying at Fasilkom UI. I have 4 years of experience in web development,
+        with extensive knowledge in using both frontend and backend technologies to build robust
+        and functional applications.
       </p>
       <div className="flex mt-5">
         <motion.a
