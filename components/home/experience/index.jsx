@@ -40,7 +40,7 @@ const Experience = () => (
       <div className="inline-flex flex-col">
         <h1 className="inline-flex items-center flex-col md:flex-row">
           <span className="text-2xl md:text-3xl font-semibold">Experience</span>
-          <span className="hidden md:block text-2xl md:text-3xl">&nbsp;|&nbsp;</span>
+          <span className="hidden md:block text-2xl md:text-3xl text-blue-500">&nbsp;|&nbsp;</span>
           <span>organizations i have contributed to</span>
         </h1>
         {/* <div className="h-0.5 bg-blue-400 mt-2" /> */}

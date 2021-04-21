@@ -47,7 +47,7 @@ const Hero = () => {
                     target="_blank" rel="noreferrer"
                     whileHover={{scale: 1.075}}
                   >
-                    <img src={item.src} className="w-5 md:w-6 mr-4 filter invert" />
+                    <img src={item.src} className="w-6 md:w-7 mr-4 filter invert" />
                   </motion.a>
                 );
               })

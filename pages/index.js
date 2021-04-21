@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Adrian Ardizza</title>
+        <title>adrian.ardizza | home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex justify-center w-full">
