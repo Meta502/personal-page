@@ -27,6 +27,7 @@ const entries = [
       '/icons/javascript.svg',
       '/icons/react.svg',
       '/icons/next-dot-js.svg',
+      '/icons/firebase.svg',
     ],
     activities: [
       'Helped in implementing features and designs requested by other divisions',
