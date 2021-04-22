@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -10,8 +11,18 @@ module.exports = {
         'sans': ['Inter', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: () => ({
-        'hero': 'linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url(\'/images/hero_image.jpg\')',
+        'hero': `url(\'/images/hero_image.jpg\')`,
+        'hero-pattern': 'linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url(\'/images/background.png\')',
       }),
+      animation: {
+        'top-left-linear-infinite': 'top-left-linear-infinite 800s linear infinite',
+      },
+      keyframes: {
+        'top-left-linear-infinite': {
+          'from': {'background-position': '0 0'},
+          'to': {'background-position': '-400% -800%'},
+        },
+      },
       height: {
         'screen-1/2': '50vh',
         'screen-3/4': '75vh',
@@ -41,6 +52,9 @@ module.exports = {
       width: {
         '1/4': '25%',
         '3/4': '75%',
+      },
+      opacity: {
+        '35': '.35',
       },
     },
   },

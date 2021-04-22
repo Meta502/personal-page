@@ -1,7 +1,7 @@
 import {ContentfulClient, ContentfulProvider} from 'react-contentful';
 import Navbar from '@components/base/navbar';
 import Footer from '@components/base/footer';
-import Hero from '../components/home/hero';
+import Scrollbar from '../components/base/scrollbar';
 import {motion} from 'framer-motion';
 import '../styles/globals.css';
 import propTypes from 'prop-types';
@@ -14,15 +14,9 @@ const contentfulClient = new ContentfulClient({
 function MyApp({Component, pageProps}) {
   return (
     <ContentfulProvider client={contentfulClient}>
+      <Scrollbar />
       <Navbar />
-      <Hero />
-      <motion.div
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        transition={{delay: 1.25}}
-      >
-        <Component {...pageProps} />
-      </motion.div>
+      <Component {...pageProps} />
       <Footer />
     </ContentfulProvider>
   );
