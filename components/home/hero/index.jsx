@@ -41,6 +41,7 @@ const Hero = () => {
             color: '#070a11',
           },
           pauseOnOutsideViewport: true,
+          pauseOnBlur: true,
         }}
       />
 

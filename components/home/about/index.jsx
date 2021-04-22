@@ -32,8 +32,9 @@ const About = () => (
                   key={item.href}
                   target="_blank" rel="noreferrer"
                   whileHover={{scale: 1.075}}
+                  className="mr-4 last:mr-0 w-8 md:w-7"
                 >
-                  <img src={item.src} className="w-8 mr-4 md:w-7" />
+                  <img src={item.src} />
                 </motion.a>
               );
             })
