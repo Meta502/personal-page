@@ -1,11 +1,16 @@
+import {useContentful} from 'react-contentful';
 import {useInView} from 'react-intersection-observer';
-import {langEntries, databaseEntries, frontendEntries} from '../config';
 import Title from '@components/base/text/title';
-
-const skillEntries = [...langEntries, ...databaseEntries, ...frontendEntries];
 
 const Skills = () => {
   const [ref] = useInView();
+  const {data, loading} = useContentful({
+    contentType: 'skills',
+    query: {
+      'order': 'fields.id',
+    },
+  });
+
   return (
     <div className="flex flex-col items-center justify-center mt-10 mb-16 py-8 select-none">
       <div ref={ref}>
@@ -19,6 +24,7 @@ const Skills = () => {
         <div
           className={`
             grid
+            auto-cols-auto
             grid-cols-2
             sm:grid-cols-3
             md:grid-cols-5
@@ -28,10 +34,13 @@ const Skills = () => {
             duration-1000
           `}
         >
-          { skillEntries.map((item) => (
-            <div className="flex flex-col justify-center items-center" key={item.name}>
-              <img className="w-12 md:w-16 mx-4 md:mx-8 mt-5 mb-2" src={item.src} />
-              <p>{item.name}</p>
+          { !loading && data?.items.map((item) => (
+            <div className="flex flex-col justify-center items-center" key={item.fields.id}>
+              <img
+                className="w-12 md:w-16 mx-4 md:mx-8 mt-5 mb-2"
+                src={item.fields.image.fields.file.url}
+              />
+              <p>{item.fields.name}</p>
             </div>
           ))}
         </div>

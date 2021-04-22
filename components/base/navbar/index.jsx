@@ -32,6 +32,7 @@ const Navbar = () => {
         w-full
         py-4
         px-8
+        duration-200
         ${scrolled > 50 && 'bg-gray-dark'}
       `}
       initial="hidden"
@@ -40,8 +41,8 @@ const Navbar = () => {
     >
       <div className="flex justify-between items-center mx-auto text-white">
         <Link href="/">
-          <h1 className="text-lg font-semibold cursor-pointer select-none">
-            adrian.ardizza
+          <h1 className="text-lg cursor-pointer select-none">
+            <span className="font-semibold">Adrian</span>Ardizza
           </h1>
         </Link>
         <div className="flex font-light text-md">
