@@ -12,13 +12,14 @@ const Skills = () => {
   });
 
   return (
-    <div className="flex flex-col items-center justify-center mt-10 mb-16 py-8 select-none">
+    <div className="flex flex-col items-center md:items-start justify-center mt-10 mb-16 py-8
+                    select-none">
       <div ref={ref}>
         <Title title='skills & technologies' subtitle='what i use to develop' inView={true} />
       </div>
 
       <div
-        className="flex flex-col items-center justify-center mt-4"
+        className="flex flex-col items-start justify-start mt-4"
         ref={ref}
       >
         <div
@@ -35,12 +36,14 @@ const Skills = () => {
           `}
         >
           { !loading && data?.items.map((item) => (
-            <div className="flex flex-col justify-center items-center" key={item.fields.id}>
+            <div
+              className="flex flex-col justify-center items-center"
+              key={item.fields.id}>
               <img
-                className="w-12 md:w-16 mx-4 md:mx-8 mt-5 mb-2"
+                className="w-12 md:w-16 mx-4 md:mx-8 mt-5 mb-2 opacity-80"
                 src={item.fields.image.fields.file.url}
               />
-              <p>{item.fields.name}</p>
+              <p className="font-light">{item.fields.name}</p>
             </div>
           ))}
         </div>

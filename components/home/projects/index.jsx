@@ -13,7 +13,8 @@ const Projects = () => {
   });
 
   return (
-    <div className="flex flex-col justify-center items-center mt-10 mb-16 w-full select-none">
+    <div className="flex flex-col justify-center items-center mt-10 mb-16 w-full select-none
+                    max-w-6xl">
       <div ref={ref}>
         <Title title='projects' subtitle="what i've worked on" inView={true} className="mb-8" />
       </div>

@@ -13,8 +13,8 @@ const Title = ({title, subtitle, className, inView = true}) => (
             ${className}
           `}
   >
-    <span className="text-2xl md:text-3xl font-semibold">{title}</span>
-    <span className="hidden md:block text-2xl md:text-3xl text-blue-500">&nbsp;|&nbsp;</span>
+    <span className="text-2xl md:text-3xl font-semibold text-gray-500">{title}</span>
+    <span className="hidden md:block text-2xl md:text-3xl text-gray-500">&nbsp;|&nbsp;</span>
     <span>{subtitle}</span>
   </h1>
 );

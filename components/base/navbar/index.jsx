@@ -41,7 +41,8 @@ const Navbar = () => {
     >
       <div className="flex justify-between items-center mx-auto text-white">
         <Link href="/">
-          <h1 className="text-lg cursor-pointer select-none">
+          <h1 className="text-lg cursor-pointer select-none flex">
+            <img src="/icons/logo.png" className="h-6 mr-2" />
             <span className="font-semibold">Adrian</span>Ardizza
           </h1>
         </Link>

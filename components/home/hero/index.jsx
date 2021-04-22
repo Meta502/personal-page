@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
-import {heroWords, heroSocial} from '../config';
+import {heroWords} from '../config';
 
 import AnimatedText from './AnimatedText';
 
@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="flex flex-col h-screen-1/2 w-full items-center justify-center
+      className="flex flex-col h-screen w-full items-center justify-center
                  bg-hero bg-cover"
     >
       <motion.div
@@ -38,20 +38,9 @@ const Hero = () => {
             <AnimatedText words={heroWords} index={wordIndex} />
           </h1>
           <div className="flex mt-2">
-            {
-              heroSocial.map((item) => {
-                return (
-                  <motion.a
-                    href={item.href}
-                    key={item.href}
-                    target="_blank" rel="noreferrer"
-                    whileHover={{scale: 1.075}}
-                  >
-                    <img src={item.src} className="w-6 md:w-7 mr-4 filter invert" />
-                  </motion.a>
-                );
-              })
-            }
+            <a href="#about" className="border border-white text-white px-5 py-2 rounded-md">
+              Find out more &nbsp;▼
+            </a>
           </div>
         </div>
       </motion.div>

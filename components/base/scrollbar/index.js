@@ -14,6 +14,10 @@ const scrollbarStyle = `
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
 `;
 
 

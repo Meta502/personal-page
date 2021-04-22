@@ -14,10 +14,14 @@ module.exports = {
       }),
       height: {
         'screen-1/2': '50vh',
+        'screen-3/4': '75vh',
       },
       colors: {
         gray: {
           dark: '#151515',
+        },
+        blue: {
+          dark: '#3969b8',
         },
       },
       maxWidth: {
@@ -28,6 +32,10 @@ module.exports = {
         '2/5': '40%',
         '62.5': '62.5%',
         '1/2': '50%',
+      },
+      maxHeight: {
+        'screen-1/2': '50vh',
+        'screen-3/4': '75vh',
       },
       width: {
         '1/4': '25%',
