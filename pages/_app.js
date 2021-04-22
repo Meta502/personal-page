@@ -1,5 +1,6 @@
 import {ContentfulClient, ContentfulProvider} from 'react-contentful';
-import Navbar from '../components/base/navbar';
+import Navbar from '@components/base/navbar';
+import Footer from '@components/base/footer';
 import Hero from '../components/home/hero';
 import {motion} from 'framer-motion';
 import '../styles/globals.css';
@@ -22,6 +23,7 @@ function MyApp({Component, pageProps}) {
       >
         <Component {...pageProps} />
       </motion.div>
+      <Footer />
     </ContentfulProvider>
   );
 }

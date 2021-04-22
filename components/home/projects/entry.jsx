@@ -12,7 +12,7 @@ const Entry = ({title, description, projectLink, sourceLink, image}) => (
     </div>
     <div className="max-w-sm md:max-w-62.5">
       <SectionTitle title={title} />
-      <p className="text-justify mb-4 mr-4">
+      <p className="mb-4 mr-4">
         {description}
       </p>
       <div className="flex justify-center md:justify-start">

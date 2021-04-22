@@ -33,7 +33,7 @@ const Navbar = () => {
         py-4
         px-8
         duration-200
-        ${scrolled > 50 && 'bg-gray-dark'}
+        ${scrolled > 200 && 'bg-gray-darker'}
       `}
       initial="hidden"
       animate="show"
@@ -48,7 +48,20 @@ const Navbar = () => {
         </Link>
         <div className="flex font-light text-md">
           <Item href="/">
-            <a className="mr-5">home</a>
+            <motion.a
+              className="mr-5 cursor-pointer"
+              whileHover={{scale: 1.1}}
+            >
+              home
+            </motion.a>
+          </Item>
+          <Item href="/blog">
+            <motion.a
+              className="mr-5 cursor-pointer"
+              whileHover={{scale: 1.1}}
+            >
+              blog
+            </motion.a>
           </Item>
         </div>
       </div>

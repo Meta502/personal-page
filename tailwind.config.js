@@ -10,7 +10,7 @@ module.exports = {
         'sans': ['Inter', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: () => ({
-        'hero': 'linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)), url(\'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80\')',
+        'hero': 'linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url(\'/images/hero_image.jpg\')',
       }),
       height: {
         'screen-1/2': '50vh',
@@ -19,6 +19,7 @@ module.exports = {
       colors: {
         gray: {
           dark: '#151515',
+          darker: '#070a11',
         },
         blue: {
           dark: '#3969b8',

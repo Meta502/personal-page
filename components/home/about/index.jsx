@@ -1,6 +1,5 @@
 import {motion} from 'framer-motion';
 import {heroSocial} from '../config';
-import Skills from '@components/home/skills';
 import Title from '@components/base/text/title';
 
 const cvLink = 'https://drive.google.com/file/d/1BBS2RWfitQq6VOhwzIbKCMW4IupplB3q/view?usp=sharing';
