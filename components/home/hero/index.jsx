@@ -38,9 +38,13 @@ const Hero = () => {
             <AnimatedText words={heroWords} index={wordIndex} />
           </h1>
           <div className="flex mt-2">
-            <a href="#about" className="border border-white text-white px-5 py-2 rounded-md">
+            <motion.a
+              href="#about"
+              className="border border-white text-white px-5 py-2 rounded-md"
+              whileHover={{scale: 1.03}}
+            >
               Find out more &nbsp;▼
-            </a>
+            </motion.a>
           </div>
         </div>
       </motion.div>

@@ -12,7 +12,7 @@ const Skills = () => {
   });
 
   return (
-    <div className="flex flex-col items-center md:items-start justify-center mt-10 mb-16 py-8
+    <div className="flex flex-col items-center justify-center mt-10 mb-16 py-8
                     select-none">
       <div ref={ref}>
         <Title title='skills & technologies' subtitle='what i use to develop' inView={true} />

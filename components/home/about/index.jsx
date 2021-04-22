@@ -10,7 +10,8 @@ const About = () => (
   <>
     <div id="about" />
     <div
-      className="flex flex-col items-center lg:items-start lg:grid grid-cols-4 my-8 select-none max-w-6xl"
+      className="flex flex-col items-center lg:items-start lg:grid grid-cols-4 my-8 select-none
+                max-w-6xl"
     >
       <div className="max-w-xs w-64 md:mr-10">
         <img className="rounded-full" src="/images/me.jpg" />
@@ -46,7 +47,7 @@ const About = () => (
             className="bg-blue-dark text-white px-6 py-2.5 rounded-md mr-4 font-light"
             whileHover={{scale: 1.03}}
           >
-          Download CV
+            Download CV
           </motion.a>
           <motion.a
             href={emailLink}
@@ -55,10 +56,10 @@ const About = () => (
                      font-light"
             whileHover={{scale: 1.03}}
           >
-          Email Me
+            Email Me
           </motion.a>
         </div>
-        <Skills />
+        {/* <Skills /> */}
       </div>
     </div>
   </>
