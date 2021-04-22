@@ -14,8 +14,10 @@ const navAnimation = {
   },
 };
 
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(0);
+  const [height, setHeight] = useState(0);
   const router = useRouter();
 
   useEffect(() => {
@@ -23,19 +25,27 @@ const Navbar = () => {
       const scrolled = document.scrollingElement.scrollTop;
       setScrolled(scrolled);
     });
+    setHeight(window.innerHeight);
   }, []);
+
+  useEffect(() => {
+    function handleResize() {
+      setHeight(window.innerHeight);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  });
 
   return (
     <motion.div
       className={`
-        transition-all
         fixed
         z-50
         w-full
         py-4
         px-8
-        duration-200
-        ${(scrolled > 200 || router.pathname != '/') && 'bg-gray-darker'}
+        ${(scrolled > height - 150 || router.pathname != '/') && 'bg-gray-darker'}
       `}
       initial="hidden"
       animate="show"
