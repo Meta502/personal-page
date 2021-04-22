@@ -11,11 +11,11 @@ module.exports = {
         'sans': ['Inter', ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: () => ({
-        'hero': `url(\'/images/hero_image.jpg\')`,
-        'hero-pattern': 'linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.45)), url(\'/images/background.png\')',
+        'hero': `linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.35)), url(\'/images/hero_image.jpg\')`,
+        'hero-pattern': 'url(\'/images/background.png\')',
       }),
       animation: {
-        'top-left-linear-infinite': 'top-left-linear-infinite 800s linear infinite',
+        'top-left-linear-infinite': 'top-left-linear-infinite 1200s linear infinite',
       },
       keyframes: {
         'top-left-linear-infinite': {
@@ -34,6 +34,7 @@ module.exports = {
         },
         blue: {
           dark: '#3969b8',
+          darker: '#0b0f1a',
         },
       },
       maxWidth: {

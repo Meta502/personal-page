@@ -2,7 +2,6 @@ import {ContentfulClient, ContentfulProvider} from 'react-contentful';
 import Navbar from '@components/base/navbar';
 import Footer from '@components/base/footer';
 import Scrollbar from '../components/base/scrollbar';
-import {motion} from 'framer-motion';
 import '../styles/globals.css';
 import propTypes from 'prop-types';
 

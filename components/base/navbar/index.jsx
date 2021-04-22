@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
-import {motion} from 'framer-motion';
 import Link from 'next/link';
+import {useRouter} from 'next/router';
+import {motion} from 'framer-motion';
 import Item from './MenuItem';
 
 const navAnimation = {
@@ -15,6 +16,7 @@ const navAnimation = {
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     document.addEventListener('scroll', (e) => {
@@ -33,7 +35,7 @@ const Navbar = () => {
         py-4
         px-8
         duration-200
-        ${scrolled > 200 && 'bg-gray-darker'}
+        ${(scrolled > 200 || router.pathname != '/') && 'bg-gray-darker'}
       `}
       initial="hidden"
       animate="show"

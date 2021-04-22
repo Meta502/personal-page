@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import {heroWords} from '../config';
+import Particles from 'react-particles-js';
 
 import AnimatedText from './AnimatedText';
 
@@ -17,21 +18,52 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="flex flex-col relative h-screen w-full items-center justify-center
-                 bg-hero bg-cover"
+      className="flex flex-col h-screen w-full items-center justify-center relative"
     >
-      <div
+      <Particles
+        width="100%"
+        height="100%"
+        className="absolute h-full w-full"
+        params={{
+          particles: {
+            number: {
+              value: 40,
+              density: {
+                enable: true,
+                value_area: 1000,
+              },
+            },
+            move: {
+              speed: 1,
+            },
+          },
+          background: {
+            color: '#070a11',
+          },
+          interactivity: {
+            events: {
+              onhover: {
+                enable: true,
+                mode: 'repulse',
+              },
+            },
+          },
+          pauseOnOutsideViewport: true,
+        }}
+      />
+
+      {/* <div
         className={`
           absolute
           z-0
-          w-full 
+          w-full
           h-full
           bg-hero-pattern
           bg-repeat
           animate-top-left-linear-infinite
           opacity-35
         `}
-      />
+      /> */}
       <motion.div
         className="flex z-10"
         initial={{opacity: 0}}

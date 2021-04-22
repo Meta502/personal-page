@@ -20,8 +20,8 @@ const Entry = ({title, description, projectLink, sourceLink, image}) => (
           <motion.a
             href={projectLink}
             target="_blank"
-            className="flex justify-center items-center bg-blue-dark text-white px-6 py-3
-                      rounded-md font-light mr-4 text-sm"
+            className="flex justify-center items-center bg-blue-dark text-white px-6 py-2.5
+                      rounded-md font-light mr-4"
             whileHover={{scale: 1.03}}
           >
             Visit Project
