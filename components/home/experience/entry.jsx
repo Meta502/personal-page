@@ -9,15 +9,15 @@ const Entry = ({
   <div className="w-full px-8">
     <div className="flex flex-col md:flex-row justify-start w-full mb-1">
       <div className="mr-6 md:w-3/4">
-        <SectionTitle title={entry.position} />
-        <SectionSubtitle text={`${entry.organization} | ${entry.period}`} />
-        <Technologies array={entry.technologies} className="flex lg:hidden" />
+        <SectionTitle title={entry.fields.position} />
+        <SectionSubtitle text={`${entry.fields.organization} | ${entry.fields.period}`} />
+        <Technologies array={entry.fields.technologies} className="flex lg:hidden" />
       </div>
-      <Technologies array={entry.technologies} className="hidden lg:flex justify-end" />
+      <Technologies array={entry.fields.technologies} className="hidden lg:flex justify-end" />
     </div>
     <p>
       <ul className="list-disc list-outside ml-4">
-        {entry.activities.map((item, index) => <li key={index}>{item}</li>)}
+        {entry.fields.activities.map((item, index) => <li key={index}>{item}</li>)}
       </ul>
     </p>
   </div>

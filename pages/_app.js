@@ -1,12 +1,18 @@
+import {ContentfulClient, ContentfulProvider} from 'react-contentful';
 import Navbar from '../components/base/navbar';
 import Hero from '../components/home/hero';
 import {motion} from 'framer-motion';
 import '../styles/globals.css';
 import propTypes from 'prop-types';
 
+const contentfulClient = new ContentfulClient({
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_TOKEN,
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE,
+});
+
 function MyApp({Component, pageProps}) {
   return (
-    <>
+    <ContentfulProvider client={contentfulClient}>
       <Navbar />
       <Hero />
       <motion.div
@@ -16,7 +22,7 @@ function MyApp({Component, pageProps}) {
       >
         <Component {...pageProps} />
       </motion.div>
-    </>
+    </ContentfulProvider>
   );
 }
 

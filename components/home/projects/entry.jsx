@@ -4,7 +4,7 @@ import SectionTitle from '@components/base/text/SectionTitle';
 
 const Entry = ({title, description, projectLink, sourceLink, image}) => (
   <div
-    className="flex flex-col-reverse md:flex-row justify-center items-center mb-12 gap-x-6 mx-8
+    className="flex flex-col-reverse md:flex-row justify-center items-center mb-14 gap-x-6 mx-8
               md:mx-0"
   >
     <div className="max-w-sm md:max-w-62.5">

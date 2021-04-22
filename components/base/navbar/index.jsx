@@ -23,10 +23,6 @@ const Navbar = () => {
     });
   }, []);
 
-  useEffect(() => {
-    console.log(scrolled);
-  }, [scrolled]);
-
   return (
     <motion.div
       className={`
