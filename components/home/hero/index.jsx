@@ -34,19 +34,11 @@ const Hero = () => {
               },
             },
             move: {
-              speed: 1,
+              speed: 1.5,
             },
           },
           background: {
             color: '#070a11',
-          },
-          interactivity: {
-            events: {
-              onhover: {
-                enable: true,
-                mode: 'repulse',
-              },
-            },
           },
           pauseOnOutsideViewport: true,
         }}
