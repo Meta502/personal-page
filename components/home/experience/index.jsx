@@ -9,7 +9,7 @@ const Experience = () => {
   const {data, loading} = useContentful({
     contentType: 'experience',
     query: {
-      'order': 'fields.id',
+      'order': '-fields.id',
     },
   });
 

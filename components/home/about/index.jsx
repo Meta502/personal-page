@@ -10,12 +10,12 @@ const About = () => (
   <>
     <div id="about" />
     <div
-      className="flex flex-col lg:grid grid-cols-4 my-8 select-none max-w-6xl"
+      className="flex flex-col items-center lg:items-start lg:grid grid-cols-4 my-8 select-none max-w-6xl"
     >
       <div className="max-w-xs w-64 md:mr-10">
         <img className="rounded-full" src="/images/me.jpg" />
       </div>
-      <div className="col-span-3 flex flex-col justify-center m-8 md:m-0 pt-8">
+      <div className="col-span-3 flex flex-col justify-center m-8 md:m-0 lg:pt-8">
         <Title title='about me' subtitle='full-stack web developer' className="mb-1" />
         <p className="font-light text-justify">
         My name is Adrian Ardizza, an aspiring web developer and computer science student
@@ -23,7 +23,7 @@ const About = () => (
         with extensive knowledge in using both frontend and backend technologies to build robust
         and functional applications.
         </p>
-        <div className="flex my-5 opacity-80">
+        <div className="flex justify-center lg:justify-start my-6 md:my-5 opacity-80">
           {
             heroSocial.map((item) => {
               return (
@@ -33,13 +33,13 @@ const About = () => (
                   target="_blank" rel="noreferrer"
                   whileHover={{scale: 1.075}}
                 >
-                  <img src={item.src} className="w-6 md:w-7 mr-4 filter" />
+                  <img src={item.src} className="w-8 mr-4 md:w-7" />
                 </motion.a>
               );
             })
           }
         </div>
-        <div className="flex">
+        <div className="flex justify-center md:justify-start">
           <motion.a
             href={cvLink}
             target="_blank"
