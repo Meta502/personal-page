@@ -31,7 +31,7 @@ const About = () => (
                   href={item.href}
                   key={item.href}
                   target="_blank" rel="noreferrer"
-                  whileHover={{scale: 1.075}}
+                  whileHover={{scale: 1.0, y: -3}}
                   className="mr-4 last:mr-0 w-8 md:w-7"
                 >
                   <img src={item.src} />

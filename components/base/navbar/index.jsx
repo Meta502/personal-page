@@ -52,7 +52,7 @@ const Navbar = () => {
           <Item href="/">
             <motion.a
               className="mr-5 cursor-pointer"
-              whileHover={{scale: 1.1}}
+              whileHover={{y: -2}}
             >
               home
             </motion.a>
@@ -60,7 +60,7 @@ const Navbar = () => {
           <Item href="/blog">
             <motion.a
               className="mr-5 cursor-pointer"
-              whileHover={{scale: 1.1}}
+              whileHover={{y: -2}}
             >
               blog
             </motion.a>
