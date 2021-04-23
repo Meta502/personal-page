@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import Link from 'next/link';
 
 const Breadcrumb = ({title}) => (
-  <div className="flex self-start mb-1">
+  <div className="flex self-start mb-1 select-none lowercase">
     <Link href="/blog">
       <motion.p
         className="cursor-pointer accelerated"
@@ -14,7 +14,7 @@ const Breadcrumb = ({title}) => (
       </motion.p>
     </Link>
     &nbsp;//&nbsp;
-    <span className="text-blue-dark font-medium">{title.toLowerCase()}</span>
+    <span className="text-blue-dark font-medium">{title}</span>
   </div>
 );
 

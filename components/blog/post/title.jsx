@@ -3,8 +3,8 @@ import convertDate from '@components/convertDate';
 
 const Title = ({title, type, date}) => (
   <>
-    <h1 className="text-2xl md:text-4xl font-bold">{title}</h1>
-    <span className="text-gray-500 lowercase">
+    <h1 className="text-2xl md:text-4xl font-bold select-none">{title}</h1>
+    <span className="text-gray-500 lowercase select-none">
       {type} • { convertDate(date) }
     </span>
   </>

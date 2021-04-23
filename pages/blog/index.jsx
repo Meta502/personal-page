@@ -11,10 +11,6 @@ const Blog = () => {
     },
   });
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
-
   return (
     <div className="flex flex-col items-center min-h-screen py-24">
       <Title
