@@ -29,11 +29,23 @@ const Card = ({
         rounded-lg
         select-none
         cursor-pointer
+        group
       `}
-      whileHover={{y: -3}}
+      whileHover={{y: -4}}
       transition={{duration: 0.25}}
     >
-      <div className="aspect-w-16 aspect-h-9 w-full">
+      <div
+        className={`
+          aspect-w-16
+          aspect-h-9
+          w-full
+          filter
+          grayscale
+          group-hover:grayscale-0
+          duration-250
+          transition-all
+        `}
+      >
         <img className="rounded-t-lg w-full object-cover" src={cover} />
       </div>
 

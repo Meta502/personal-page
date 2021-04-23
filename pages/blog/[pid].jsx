@@ -1,4 +1,3 @@
-import {useEffect} from 'react';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import {useRouter} from 'next/router';
 import {useContentful} from 'react-contentful';

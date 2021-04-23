@@ -1,4 +1,3 @@
-import {useEffect} from 'react';
 import {useContentful} from 'react-contentful';
 import Title from '@components/base/text/title';
 import Card from '@components/blog/card';
