@@ -1,11 +1,10 @@
 import {useEffect} from 'react';
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import {useRouter} from 'next/router';
-import Link from 'next/link';
-import {motion} from 'framer-motion';
 import {useContentful} from 'react-contentful';
 import postOptions from '@components/blog/post';
-import convertDate from '@components/convertDate';
+import Breadcrumb from '@components/blog/post/breadcrumb';
+import Title from '@components/blog/post/title';
 
 const Post = () => {
   const router = useRouter();
@@ -23,7 +22,7 @@ const Post = () => {
   }, [data]);
 
   return (
-    <div className="flex flex-col items-center min-h-screen py-24">
+    <div className="flex flex-col items-center min-h-screen py-24 mx-5">
       { fetched &&
       <>
         <div className="w-full self-center mb-6 max-w-6xl">
@@ -33,23 +32,8 @@ const Post = () => {
         </div>
         <div className="flex flex-col max-w-3xl w-full">
           <div className="mb-8">
-            <div className="flex self-start mb-1">
-              <Link href="/blog">
-                <motion.p
-                  className="cursor-pointer accelerated"
-                  whileHover={{x: -2}}
-                  transition={{duration: 0.25}}
-                >
-                  blog
-                </motion.p>
-              </Link>
-              &nbsp;//&nbsp;
-              <span className="text-blue-dark font-medium">{data.fields?.title.toLowerCase()}</span>
-            </div>
-            <h1 className="text-4xl font-bold">{data.fields?.title}</h1>
-            <span className="text-gray-500 lowercase">
-              {data.fields?.type} • { convertDate(data.sys?.createdAt) }
-            </span>
+            <Breadcrumb title={data.fields?.title} />
+            <Title title={data.fields?.title} type={data.fields?.type} date={data.sys?.createdAt} />
             {documentToReactComponents(data.fields?.content, postOptions)}
           </div>
         </div>

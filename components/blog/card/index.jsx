@@ -17,13 +17,13 @@ const Card = ({
     <motion.div
       className={`
         flex 
-        flex-col 
+        flex-col
         justify-start
         items-start 
-        w-full 
+        w-full
+        h-full
         my-2
         max-w-sm
-        md:max-w-sm
         shadow-lg
         border
         rounded-lg
@@ -37,7 +37,7 @@ const Card = ({
         <img className="rounded-t-lg w-full object-cover" src={cover} />
       </div>
 
-      <div className="py-4 px-6 h-full">
+      <div className="py-4 px-6 h-full w-full">
         <p className="text-sm text-blue-dark font-medium">
           { postType } // { convertDate(date) }
         </p>
@@ -45,10 +45,10 @@ const Card = ({
         <p className="font-light mb-2.5">
           {description}
         </p>
-        <div className="flex justify-self-end">
+        <div className="flex flex-wrap justify-self-end">
           { tags?.map((item) => (
             <p
-              className="text-xs text-white bg-gray-400 rounded-full py-1 px-3 mr-2"
+              className="text-xs text-white bg-gray-400 rounded-full py-1 px-3 mr-2 mb-2"
               key={item}
             >
               {item}
