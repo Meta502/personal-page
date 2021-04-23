@@ -26,11 +26,13 @@ const Blog = () => {
         {!loading && data?.items.map((item, index) => (
           <Card
             key={item.sys.id}
+            id={item.sys.id}
             date={item.sys.createdAt}
             postType={item.fields.type}
             title={item.fields.title}
             description={item.fields.description}
             tags={item.fields.tags}
+            cover={item.fields.cover?.fields.file.url}
           />
         ))}
       </div>

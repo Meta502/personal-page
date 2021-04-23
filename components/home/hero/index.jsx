@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import {heroWords} from '../config';
+import Link from 'next/link';
 import Particles from 'react-particles-js';
 
 import AnimatedText from './AnimatedText';
@@ -75,9 +76,18 @@ const Hero = () => {
             <AnimatedText words={heroWords} index={wordIndex} />
           </h1>
           <div className="flex mt-2">
+            <Link href="/blog">
+              <motion.a
+                href="#about"
+                className="border border-white text-white mr-2 px-5 py-2 rounded-md accelerated"
+                whileHover={{scale: 1.03}}
+              >
+                Blog
+              </motion.a>
+            </Link>
             <motion.a
               href="#about"
-              className="border border-white text-white px-5 py-2 rounded-md"
+              className="border border-white text-white mr-2 px-5 py-2 rounded-md accelerated"
               whileHover={{scale: 1.03}}
             >
               Find out more &nbsp;▼
